@@ -187,7 +187,9 @@ namespace OFXParser
                                     transacaoAtual.Id = meuXml.Value;
                                     break;
                                 case "CHECKNUM":
-                                    transacaoAtual.CheckNum = meuXml.Value;
+                                    long checkNum;
+                                    long.TryParse(meuXml.Value, out checkNum);
+                                    transacaoAtual.Checksum = checkNum;
                                     break;
                                 case "MEMO":
                                     transacaoAtual.Description = string.IsNullOrEmpty(meuXml.Value) ? "" : meuXml.Value.Trim().Replace("  ", " ");
