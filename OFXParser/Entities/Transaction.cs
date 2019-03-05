@@ -13,8 +13,8 @@ namespace OFXParser.Entities
         public String Id { get; set; }
 
         public String Description { get; set; }
-
-        public long Checksum { get; set; }
+        
+        public String CheckNum { get; set; }
         public string Name { get; set; }
 
     }
